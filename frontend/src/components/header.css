@@ -1,0 +1,140 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f4f0eb;
+  font-family: 'Georgia', serif;
+  border-bottom: 1px solid #e0ddd8;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  height: 70px;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Transparent header at the top */
+.header-transparent {
+  background-color: transparent;
+  border-bottom: none;
+}
+
+/* Restores background when scrolled down */
+.header-scrolled {
+  background-color: #f4f0eb !important;
+  border-bottom: 1px solid #e0ddd8 !important;
+}
+
+.header-transparent .nav-links li a,
+.header-transparent .utility-icons a {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #222;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active-link {
+  color: #7c6b5c;
+}
+
+.utility-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.utility-icons a {
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+.utility-icons a:hover {
+  color: #7c6b5c;
+}
+
+/* Mobile specific styles */
+.nav-desktop {
+  display: flex;
+}
+
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #f4f0eb;
+  border-top: 1px solid #e0ddd8;
+  padding: 1rem 0;
+  z-index: 10;
+}
+
+.nav-links-mobile {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.nav-links-mobile li {
+  margin: 0.75rem 0;
+}
+
+.nav-links-mobile li a {
+  text-decoration: none;
+  color: #222;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav-links-mobile li a:hover,
+.nav-links-mobile li a.active-link {
+  color: #7c6b5c;
+}
+
+.utility-icons-mobile {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    color: #222;
+  }
+}

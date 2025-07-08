@@ -1,0 +1,494 @@
+:root {
+  --primary-color: #2C3E50;
+  --secondary-color: #3498DB;
+  --text-color: #2C3E50;
+  --bg-light: #F5F7FA;
+  --bg-dark: #FFFFFF;
+}
+
+.about-container {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: var(--text-color);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('/public/images/new.jpg') no-repeat center/center;
+  background-size: cover;
+  color: black;
+  padding: 80px 20px;
+  border-radius: 10px;
+  margin-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent, rgba(52, 152, 219, 0.2));
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Our Story Section */
+.story {
+  background: var(--bg-dark);
+  padding: 60px 0;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.story h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.story-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+/* Our Values Section */
+.values {
+  background: var(--bg-light);
+  padding: 60px 0;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.values h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.values-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.value {
+  background: var(--bg-dark);
+  padding: 25px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.value:hover {
+  transform: translateY(-5px);
+}
+
+.value h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  background: var(--primary-color);
+}
+
+.value p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Why Choose Us Section */
+.why-choose {
+  background: var(--bg-dark);
+  padding: 80px 40px;
+  border-radius: 10px;
+  margin-bottom: 80px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.why-choose h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.why-choose h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--primary-color);
+}
+
+.why-choose ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.why-choose li {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.why-choose li:hover {
+  transform: translateY(-5px);
+}
+
+.why-choose li::before {
+  content: '✓';
+  font-size: 2rem;
+  color: var(--primary-color);
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.why-choose li span {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-left: 40px;
+  line-height: 1.6;
+}
+
+/* Team Section */
+.team {
+  background: var(--bg-light);
+  padding: 80px 40px;
+  border-radius: 10px;
+  margin-bottom: 80px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.team h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.team h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--primary-color);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.team-member {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.team-member-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Timeline Section */
+.timeline {
+  background: var(--bg-dark);
+  padding: 80px 40px;
+  border-radius: 10px;
+  margin-bottom: 80px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.timeline h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.timeline h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--primary-color);
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--primary-color);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  width: 50%;
+  padding: 20px 40px;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  right: 0;
+  text-align: right;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  top: 20px;
+}
+
+.timeline-item:nth-child(odd)::before {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.timeline-item:nth-child(even)::before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.timeline-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .about-container {
+    padding: 30px 20px;
+  }
+
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .values-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .why-choose ul {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .timeline-item::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+  .timeline-item:nth-child(even) {
+    right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 20px;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .story, .values, .why-choose, .team, .timeline {
+    padding: 40px 20px;
+  }
+
+  .values-list {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-container {
+    padding: 0 20px;
+  }
+}
+
+.value p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Why Choose Us Section */
+.why-choose {
+  background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  padding: 50px 20px;
+  margin-top: 60px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.why-choose h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.why-choose ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-choose li {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .story h2 {
+    font-size: 1.8rem;
+  }
+
+  .values h2 {
+    font-size: 1.8rem;
+  }
+
+  .value {
+    padding: 20px;
+  }
+
+  .why-choose h2 {
+    font-size: 1.8rem;
+  }
+}

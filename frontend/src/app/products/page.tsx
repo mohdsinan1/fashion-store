@@ -1,9 +1,11 @@
 "use client";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import "./style.css";
-import Lottie from "lottie-react";
 import loadanimation from "../../assets/loading animation.json.json";
 import { product_item } from "../../assets/assets";
 import type { Product } from '../../assets/assets';

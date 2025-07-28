@@ -1,8 +1,10 @@
 "use client";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import { useState } from "react";
 import { useCart } from "@/components/CartContext";
 import "./cart.css";
-import Lottie from "lottie-react";
 import emptyCartAnimation from "../../assets/empty-cart.json.json";
 import removeCartAnimation from "../../assets/removecart.json";
 import toast from "react-hot-toast";

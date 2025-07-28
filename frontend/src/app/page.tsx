@@ -1,5 +1,7 @@
 "use client";
+import dynamic from "next/dynamic";
 
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import React, { useRef, useState } from "react";
 import "./home.css";
 import "../components/scroll-progress.css";
@@ -11,7 +13,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper";
-import Lottie from "lottie-react";
 import animatedbutton from "../assets/button.json.json";
 import shopbtn from '../assets/shpbtn.json.json'
 import Categories from "@/components/Categories/Categories";
